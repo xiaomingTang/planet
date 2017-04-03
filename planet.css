@@ -1,0 +1,213 @@
+*{
+	margin:0;
+	padding:0;
+    font-family: "Microsoft YaHei UI",sans-serif;
+	cursor:default;
+	
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body{
+	background:url(img/night.jpg);
+	background-size:cover;
+}
+/*操作及状态面板*/
+#message,#state,#operate{
+	position:absolute;
+	left:0;
+	width:730px;
+	border:8px solid #ccc;
+	border-radius:16px;
+}
+#message{
+	top:0;
+}
+#state{
+	top:300px;
+}
+#operate{
+	top:600px;
+}
+
+.head{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	font-weight:500;
+	color:#ccc;
+}
+.body{
+	width:100%;
+	height:200px;
+	color:#ccc;
+	background-color:rgba(222,222,222,0.2);
+}
+
+
+select.able,button.able{
+	padding:3px;
+	border-radius:5px;
+	color:#fff;
+	background-color:#e53;
+	cursor:pointer;
+}
+select.disable,button.disable{
+	padding:3px;
+	border-radius:5px;
+	color:#666;
+	background-color:#bbb;
+	cursor:default;
+}
+
+
+#operate option{
+	color:#fff;
+	background-color:#c22;
+}
+
+#state table{
+	width:100%;
+	border:none;
+	text-align:center;
+	vertical-align:middle;
+}
+#operate label{
+	color:#e53;
+	margin:0 10px;
+}
+#operate .disable label{
+	color:#ccc;
+}
+#operate li{
+	list-style-type:none;
+	padding:10px 0 0 20px;
+}
+/*飞船,星球,星空图*/
+#map{
+	position:relative;
+	left:50%;
+	top:100px;
+	width:800px;
+	height:800px;
+}
+#map img{
+	width:200px;
+	height:150px;
+	margin-top:25px;
+}
+#map #planet{
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%;
+	margin-left:-100px;
+	top:50%;
+	margin-top:-100px;
+}
+#map #orbit0{
+	width:350px;
+	height:350px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-175px;
+	margin-top:-175px;
+	border:1px dotted #ccc;
+	border-radius:50%;
+}
+#map #orbit1{
+	width:500px;
+	height:500px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-250px;
+	margin-top:-250px;
+	border:1px dotted #ccc;
+	border-radius:50%;
+}
+#map #orbit2{
+	width:650px;
+	height:650px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-325px;
+	margin-top:-325px;
+	border:1px dotted #ccc;
+	border-radius:50%;
+}
+#map #orbit3{
+	width:800px;
+	height:800px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-400px;
+	margin-top:-400px;
+	border:1px dotted #ccc;
+	border-radius:50%;
+}
+#map .disable{
+	display:none;
+}
+#map #ship1 div,#map #ship2 div,#map #ship3 div,#map #ship0 div{
+	height:50px;
+	background-color:#c22;
+	border-radius:10px 50px 50px 10px;
+	color:#fff;
+	font-weight:600;
+	line-height:50px;
+	text-align:center;
+}
+#map #ship0{
+	width:100px;
+	height:400px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-50px;
+	margin-top:-200px;
+}
+#map #ship1{
+	width:100px;
+	height:550px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-50px;
+	margin-top:-275px;
+}
+#map #ship2{
+	width:100px;
+	height:700px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-50px;
+	margin-top:-350px;
+}
+#map #ship3{
+	width:100px;
+	height:850px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-50px;
+	margin-top:-425px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
