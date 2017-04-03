@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="tang" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title>planet</title>
+
+	<link rel="shortcut icon" type="image/ico" href="E:\\tang\ico\icon_head2.ico" />
+	<link rel="stylesheet" type="text/css" href="planet.css" />
+</head>
+<body>
+		<!-- 地  图 -->
+	<div id="map">
+		<div id="planet">
+			<img src="img/planet.png" />
+		</div>
+		<div id="orbit0"></div>
+		<div id="orbit1"></div>
+		<div id="orbit2"></div>
+		<div id="orbit3"></div>
+		<div id="ship0" class="disable">
+			<div>&gt;&gt;&gt;&gt;&gt;</div>
+		</div>
+		<div id="ship1" class="disable">
+			<div>&gt;&gt;&gt;&gt;&gt;</div>
+		</div>
+		<div id="ship2" class="disable">
+			<div>&gt;&gt;&gt;&gt;&gt;</div>
+		</div>
+		<div id="ship3" class="disable">
+			<div>&gt;&gt;&gt;&gt;&gt;</div>
+		</div>
+	</div>
+		<!-- 消息窗 -->
+	<div id="message" style="left:0;top:0;">
+		<div class="head">消息窗</div>
+		<div class="body"></div>
+	</div>
+		<!-- 监控窗 -->
+	<div id="state" style="left:0;top:300px;">
+		<div class="head">
+			飞船实时状态监测系统
+		</div>
+		<div class="body">
+			<table>
+				<tbody>
+					<tr>
+						<th>飞船所在轨道</th>
+						<th>动力系统</th>
+						<th>能源系统</th>
+						<th>当前飞行状态</th>
+						<th>剩余能量</th>
+					</tr>
+				</tbody>
+			</table>
+			<hr />
+			<div class="display-box"></div>
+		</div>
+	</div>
+		<!-- 控制台 -->
+	<div id="operate" style="left:0;top:600px;">
+		<div class="head">操作面板</div>
+		<div class="body">
+			<ul>
+				<li class="track disable">
+					<label>第<span class="trackNum">1</span>轨道</label>
+					<select class="ship disable">
+						<option value="level-0">前进号(速率:<span class="speed">3</span>deg/s,能耗<span class="consume">5</span>%/s)</option>
+						<option value="level-1">奔腾号(速率:<span class="speed">5</span>deg/s,能耗<span class="consume">7</span>%/s)</option>
+						<option value="level-2">超越号(速率:<span class="speed">8</span>deg/s,能耗<span class="consume">9</span>%/s)</option>
+					</select>
+					<select class="energy disable">
+						<option value="level-0">劲量型(补充能源速度:<span class="charge">4</span>%/s)</option>
+						<option value="level-1">光能型(补充能源速度:<span class="charge">6</span>%/s)</option>
+						<option value="level-2">永久型(补充能源速度:<span class="charge">8</span>%/s)</option>
+					</select>
+					<button class="build able" index=0>创建飞船</button>
+					<button class="launch disable" index=0>起飞</button>
+					<button class="stop disable" index=0>停止</button>
+					<button class="destroy disable" index=0>摧毁</button>
+				</li>
+				<li class="track disable">
+					<label>第<span class="trackNum">2</span>轨道</label>
+					<select class="ship disable">
+						<option value="level-0">前进号(速率:<span class="speed">3</span>deg/s,能耗<span class="consume">5</span>%/s)</option>
+						<option value="level-1">奔腾号(速率:<span class="speed">5</span>deg/s,能耗<span class="consume">7</span>%/s)</option>
+						<option value="level-2">超越号(速率:<span class="speed">8</span>deg/s,能耗<span class="consume">9</span>%/s)</option>
+					</select>
+					<select class="energy disable">
+						<option value="level-0">劲量型(补充能源速度:<span class="charge">4</span>%/s)</option>
+						<option value="level-1">光能型(补充能源速度:<span class="charge">6</span>%/s)</option>
+						<option value="level-2">永久型(补充能源速度:<span class="charge">8</span>%/s)</option>
+					</select>
+					<button class="build able" index=1>创建飞船</button>
+					<button class="launch disable" index=1>起飞</button>
+					<button class="stop disable" index=1>停止</button>
+					<button class="destroy disable" index=1>摧毁</button>
+				</li>
+				<li class="track disable">
+					<label>第<span class="trackNum">3</span>轨道</label>
+					<select class="ship disable">
+						<option value="level-0">前进号(速率:<span class="speed">3</span>deg/s,能耗<span class="consume">5</span>%/s)</option>
+						<option value="level-1">奔腾号(速率:<span class="speed">5</span>deg/s,能耗<span class="consume">7</span>%/s)</option>
+						<option value="level-2">超越号(速率:<span class="speed">8</span>deg/s,能耗<span class="consume">9</span>%/s)</option>
+					</select>
+					<select class="energy disable">
+						<option value="level-0">劲量型(补充能源速度:<span class="charge">4</span>%/s)</option>
+						<option value="level-1">光能型(补充能源速度:<span class="charge">6</span>%/s)</option>
+						<option value="level-2">永久型(补充能源速度:<span class="charge">8</span>%/s)</option>
+					</select>
+					<button class="build able" index=2>创建飞船</button>
+					<button class="launch disable" index=2>起飞</button>
+					<button class="stop disable" index=2>停止</button>
+					<button class="destroy disable" index=2>摧毁</button>
+				</li>
+				<li class="track disable">
+					<label>第<span class="trackNum">4</span>轨道</label>
+					<select class="ship disable">
+						<option value="level-0">前进号(速率:<span class="speed">3</span>deg/s,能耗<span class="consume">5</span>%/s)</option>
+						<option value="level-1">奔腾号(速率:<span class="speed">5</span>deg/s,能耗<span class="consume">7</span>%/s)</option>
+						<option value="level-2">超越号(速率:<span class="speed">8</span>deg/s,能耗<span class="consume">9</span>%/s)</option>
+					</select>
+					<select class="energy disable">
+						<option value="level-0">劲量型(补充能源速度:<span class="charge">4</span>%/s)</option>
+						<option value="level-1">光能型(补充能源速度:<span class="charge">6</span>%/s)</option>
+						<option value="level-2">永久型(补充能源速度:<span class="charge">8</span>%/s)</option>
+					</select>
+					<button class="build able" index=3>创建飞船</button>
+					<button class="launch disable" index=3>起飞</button>
+					<button class="stop disable" index=3>停止</button>
+					<button class="destroy disable" index=3>摧毁</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="planet.js"></script>
+</body>
+</html>
